@@ -6,7 +6,7 @@ import { v4 as uuid } from "uuid"
 export class User {
 
     @PrimaryColumn()
-    readonly id: string;
+    readonly id?: string;
 
     @Column()
     name: string;
@@ -22,10 +22,10 @@ export class User {
     password: string;
 
     @CreateDateColumn()
-    created_at: Date;
+    created_at?: Date;
 
     @UpdateDateColumn()
-    updated_at: Date;
+    updated_at?: Date;
 
     constructor() {
 
